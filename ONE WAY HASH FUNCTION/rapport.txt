@@ -1,0 +1,36 @@
+2.1
+----------
+Md5 har 32 karaktärer
+MD5(2.1)= 2b35ddc8da488848ebc90b58ab3d3ab6
+Sha1 har 38 karaktärer
+SHA1(2.1)= f02b03b3619788d92b2f82a31d004d516007185d
+Sha256 har 64 karatärer
+SHA256(2.1)= 7b2eb668d467b05f8338a5eb57b9f0741c625565af9affee831b65d315976ac0
+-----------
+2.2
+a) I have tested with several keys (from 1 char to 64 chars) and even the biggest key works with every hash function. 
+But after some research I found out that every hash function has its own hmac limit.
+MD5 has aprox. 2³²
+SHA1 & SHA256 has aprox. 2⁶⁴
+b)
+HMAC-MD5(2.1)= 7fce5c5f3c56c982ab5a47c0984313a1
+HMAC-SHA1(2.1)= 3f01a9f71857553ff5265333dc4e35d4c72922b7
+HMAC-SHA256(2.1)= 591dc585415ba3b262e2a3ad95a6bbfe09d336e9da33f47139606fe2e176e3b0
+
+2.3)
+Om man flippar sista biten i texten "saboo@kth.se" ("01100001" -> "11100001") omvandlas till ".aboo@kth.se"
+
+MD5(2.1)= 2b35ddc8da488848ebc90b58ab3d3ab6 -> MD5(2.1)= 545e40c637a7956df8f97c02f5066969
+
+SHA1(2.1)= f02b03b3619788d92b2f82a31d004d516007185d ->
+SHA1(2.1)= 8ceee8c5a674b76b06bb59421bfd016d385f3cb2
+
+SHA256(2.1)= 7b2eb668d467b05f8338a5eb57b9f0741c625565af9affee831b65d315976ac0 ->
+SHA256(2.1)= d54a5272b8de476bb14c3c69ef33dccbdd4330695b9be85ddae9de2e930585ae
+
+
+Om man jämför alla hash functions kan man se att även om man ändrar minst en bokstav kommer hela hash functionen att ändras.
+
+Question 5.
+MD5 = 52 bitar
+SH256 = 126 bitar
